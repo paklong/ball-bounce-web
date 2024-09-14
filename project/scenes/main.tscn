@@ -1,0 +1,125 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt23b6k53ue63"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_65wqi"]
+[ext_resource type="PackedScene" uid="uid://cyl51beixvqp5" path="res://scenes/boundary.tscn" id="2_4pbn5"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_65wqi")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 648.0
+offset_bottom = 1152.0
+color = Color(0.340339, 0.340339, 0.340339, 1)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 648.0
+offset_bottom = 1152.0
+
+[node name="BallLabel" type="Label" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -83.5
+offset_top = 248.0
+offset_right = 83.5
+offset_bottom = 329.0
+grow_horizontal = 2
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BadBallLabel" type="RichTextLabel" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 68.0
+offset_top = 75.0
+offset_right = 243.0
+offset_bottom = 132.0
+bbcode_enabled = true
+text = "Adding red ball in: "
+
+[node name="StatsLabel" type="RichTextLabel" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -273.0
+offset_top = 64.0
+offset_right = 128.0
+offset_bottom = 878.0
+grow_horizontal = 0
+bbcode_enabled = true
+text = "[color=Red]Red balls[/color] | White balls
+---------------------------------"
+
+[node name="Boundary" parent="." instance=ExtResource("2_4pbn5")]
+position = Vector2(324, 564)
+scale = Vector2(0.275, 0.275)
+
+[node name="SpwanLocation" type="Node2D" parent="."]
+position = Vector2(-236, 264)
+
+[node name="Marker1" type="Marker2D" parent="SpwanLocation" groups=["spawn_position"]]
+unique_name_in_owner = true
+position = Vector2(378, 200)
+scale = Vector2(0.275, 0.275)
+
+[node name="Marker2" type="Marker2D" parent="SpwanLocation" groups=["spawn_position"]]
+unique_name_in_owner = true
+position = Vector2(448, 180)
+scale = Vector2(0.275, 0.275)
+
+[node name="Marker3" type="Marker2D" parent="SpwanLocation" groups=["spawn_position"]]
+unique_name_in_owner = true
+position = Vector2(479, 105)
+scale = Vector2(0.275, 0.275)
+
+[node name="Marker4" type="Marker2D" parent="SpwanLocation" groups=["spawn_position"]]
+unique_name_in_owner = true
+position = Vector2(508, 153)
+scale = Vector2(0.275, 0.275)
+
+[node name="Marker5" type="Marker2D" parent="SpwanLocation" groups=["spawn_position"]]
+unique_name_in_owner = true
+position = Vector2(332, 264)
+scale = Vector2(0.275, 0.275)
+
+[node name="Marker6" type="Marker2D" parent="SpwanLocation" groups=["spawn_position"]]
+unique_name_in_owner = true
+position = Vector2(755, 191)
+scale = Vector2(0.275, 0.275)
+
+[node name="Marker7" type="Marker2D" parent="SpwanLocation" groups=["spawn_position"]]
+unique_name_in_owner = true
+position = Vector2(631, 122)
+scale = Vector2(0.275, 0.275)
+
+[node name="Marker8" type="Marker2D" parent="SpwanLocation" groups=["spawn_position"]]
+unique_name_in_owner = true
+position = Vector2(789, 240)
+scale = Vector2(0.275, 0.275)
+
+[node name="Marker9" type="Marker2D" parent="SpwanLocation" groups=["spawn_position"]]
+unique_name_in_owner = true
+position = Vector2(688, 133)
+scale = Vector2(0.275, 0.275)
+
+[node name="Marker10" type="Marker2D" parent="SpwanLocation" groups=["spawn_position"]]
+unique_name_in_owner = true
+position = Vector2(433, 236)
+scale = Vector2(0.275, 0.275)
+
+[node name="Marker11" type="Marker2D" parent="SpwanLocation" groups=["spawn_position"]]
+unique_name_in_owner = true
+position = Vector2(675, 212)
+scale = Vector2(0.275, 0.275)
+
+[node name="BadBallTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 10.0
+autostart = true
