@@ -44,10 +44,6 @@ reload={
 2d_physics/layer_2="Ball"
 2d_physics/layer_3="Badball"
 
-[physics]
-
-2d/physics_engine="Rapier2D"
-
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
